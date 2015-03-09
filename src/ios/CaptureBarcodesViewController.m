@@ -232,18 +232,10 @@
 {
     NSUInteger ret = 0;
     
-    if ([self shouldAutorotateToInterfaceOrientation:UIInterfaceOrientationPortrait]) {
-        ret = ret | (1 << UIInterfaceOrientationPortrait);
-    }
-    if ([self shouldAutorotateToInterfaceOrientation:UIInterfaceOrientationPortraitUpsideDown]) {
-        ret = ret | (1 << UIInterfaceOrientationPortraitUpsideDown);
-    }
-    if ([self shouldAutorotateToInterfaceOrientation:UIInterfaceOrientationLandscapeRight]) {
-        ret = ret | (1 << UIInterfaceOrientationLandscapeRight);
-    }
-    if ([self shouldAutorotateToInterfaceOrientation:UIInterfaceOrientationLandscapeLeft]) {
-        ret = ret | (1 << UIInterfaceOrientationLandscapeLeft);
-    }
+    ret = ret | (1 << UIInterfaceOrientationPortrait);
+    ret = ret | (1 << UIInterfaceOrientationPortraitUpsideDown);
+    ret = ret | (1 << UIInterfaceOrientationLandscapeRight);
+    ret = ret | (1 << UIInterfaceOrientationLandscapeLeft);
     
     return ret;
 }
